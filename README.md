@@ -294,7 +294,8 @@ Explanation for each field:
 /* Wallet daemon connection details. */
 "wallet": {
     "host": "127.0.0.1",
-    "port": 29082
+    "port": 29082,
+    "password": "<replace with rpc password>"
 },
 
 /* Redis connection into. */
