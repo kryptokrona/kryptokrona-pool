@@ -110,12 +110,12 @@
 
     "daemon": {
         "host": "127.0.0.1",
-        "port": 42081
+        "port": 11898
     },
 
     "wallet": {
         "host": "127.0.0.1",
-        "port": 8082,
+        "port": 8070,
         "password": "<replace with rpc password>"
     },
 
@@ -131,7 +131,7 @@
         },
         "wallet": {
             "checkInterval": 60,
-            "rpcMethod": "getbalance"
+            "rpcMethod": "getBalance"
         }
     },
 
