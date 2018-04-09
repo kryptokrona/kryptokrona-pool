@@ -210,7 +210,7 @@ Explanation for each field:
         "targetTime": 100, //Try to get 1 share per this many seconds
         "retargetTime": 30, //Check to see if we should retarget every this many seconds
         "variancePercent": 30, //Allow time to very this % from target without retargeting
-        "maxJump": 100 //Limit diff percent increase/decrease in a single retargetting
+        "maxJump": 100 //Limit diff percent increase/decrease in a single retargeting
     },
 
     /* Set difficulty on miner client side by passing <address> param with .<difficulty> postfix
@@ -365,7 +365,7 @@ Explanation for each field:
 
 #### 3) [Optional] Configure cryptonote-easy-miner for your pool
 Your miners that are Windows users can use [cryptonote-easy-miner](https://github.com/zone117x/cryptonote-easy-miner)
-which will automatically generate their wallet address and stratup multiple threads of simpleminer. You can download
+which will automatically generate their wallet address and start up multiple threads of simpleminer. You can download
 it and edit the `config.ini` file to point to your own pool.
 Inside the `easyminer` folder, edit `config.init` to point to your pool details
 ```ini
