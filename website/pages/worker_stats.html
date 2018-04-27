@@ -1,10 +1,8 @@
 
 <script>
-
 function loadScript(url, callback){
   var script = document.createElement("script")
     script.type = "text/javascript";
-
   if (script.readyState){  //IE
     script.onreadystatechange = function(){
       if (script.readyState == "loaded" ||
@@ -18,17 +16,14 @@ function loadScript(url, callback){
       callback();
     };
   }
-
   script.src = url;
   document.getElementsByTagName("head")[0].appendChild(script);
 }
-
 $('#addressSetButton').click(function(){
   $("#graphs").empty();
   var address = $('#yourAddress').val();
   fetchAddressWorkers(address);
 });
-
 // Fetches the workers that are known for an address and creates the graphs.
 function fetchAddressWorkers(address) {
   $.ajax({
@@ -67,7 +62,6 @@ function fetchAddressWorkers(address) {
     }
   });
 }
-
 // Gets worker graph data.
 function getWorkerGraphData(worker, address, dataHandler) {
   var worker_address = address + '+' + worker;
@@ -83,7 +77,6 @@ function getWorkerGraphData(worker, address, dataHandler) {
         names: [],
         values: []
       };
-
       var rangeMax = 0;
       for (var i = 0; i< data['charts']['hashrate'].length; i++) {
         xy = data['charts']['hashrate'][i];
@@ -93,7 +86,6 @@ function getWorkerGraphData(worker, address, dataHandler) {
         }
         graphData.values.push(xy[1]);
       }
-
       dataHandler([{
         x: graphData.names,
         y: graphData.values,
@@ -137,7 +129,6 @@ meaningful data. It's on our TODO list to speed this up.</p>
 loadScript("https://cdn.plot.ly/plotly-1.2.0.min.js", function() {
 var urlWalletAddress = location.search.split('wallet=')[1] || 0;
 var address = urlWalletAddress || docCookies.getItem('mining_address');
-
 if (address) {
 	$('#yourAddress').val(address);
 	fetchAddressWorkers(address);
