@@ -19,11 +19,6 @@ function loadScript(url, callback){
   script.src = url;
   document.getElementsByTagName("head")[0].appendChild(script);
 }
-$('#addressSetButton').click(function(){
-  $("#graphs").empty();
-  var address = $('#yourAddress').val();
-  fetchAddressWorkers(address);
-});
 // Fetches the workers that are known for an address and creates the graphs.
 function fetchAddressWorkers(address) {
   $.ajax({
@@ -133,5 +128,10 @@ if (address) {
 	$('#yourAddress').val(address);
 	fetchAddressWorkers(address);
 }
+});
+$('#addressSetButton').click(function(){
+  $("#graphs").empty();
+  var address = $('#yourAddress').val();
+  fetchAddressWorkers(address);
 });
 </script>
