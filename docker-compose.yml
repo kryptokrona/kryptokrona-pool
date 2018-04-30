@@ -1,7 +1,16 @@
 version: '3'
 
 services:
-  node1:
+  pool:
     image: funkypenguin/turtle-pool
     volumes:
-      - ../turtlecoind:/var/lib/turtlecoind/
+      - ./config:/config
+
+  redis:
+    container_name: redis
+    volumes:
+      - ./config:/config
+    image: redis
+    entrypoint: |
+      redis-server /config/redis.conf
+
