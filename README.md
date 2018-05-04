@@ -88,9 +88,8 @@ Usage
 ===
 
 #### Requirements
-* Coin daemon(s) (find the coin's repo and build latest version from source)
-* simplewallet (Bytecoin/Forknote v1.1.11).  Do NOT use Forknote 2.0.0, since it's in alpha
-```
+* Turtlecoind daemon
+* walletd
 * [Node.js](http://nodejs.org/) v0.10+ ([follow these installation instructions](https://github.com/joyent/node/wiki/Installing-Node.js-via-package-manager))
 * [Redis](http://redis.io/) key-value store v2.6+ ([follow these instructions](http://redis.io/topics/quickstart))
 * libssl required for the node-multi-hashing module
@@ -280,6 +279,7 @@ Explanation for each field:
     "enabled": true,
     "hashrateWindow": 600, //how many second worth of shares used to estimate hash rate
     "updateInterval": 3, //gather stats and broadcast every this many seconds
+    "host": "127.0.0.1", //if api module is running on a different host (i.e, containerized),
     "port": 8117,
     "blocks": 30, //amount of blocks to send at a time
     "payments": 30, //amount of payments to send at a time
