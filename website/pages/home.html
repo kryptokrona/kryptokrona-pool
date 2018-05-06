@@ -317,8 +317,6 @@
 </div>
 
 <script>
-
-
     currentPage = {
         destroy: function(){
             $('#networkLastBlockFound,#poolLastBlockFound,#yourLastShare,#marketLastUpdated').timeago('dispose');
@@ -473,7 +471,6 @@
 	/* Payouts */
 
     function getPayoutLevel(address) {
-		console.log(api + '/get_miner_payout_level?address=' + address);
         $.ajax({
             url: api + '/get_miner_payout_level?address=' + address,
             dataType: 'json',
@@ -486,7 +483,6 @@
     }
 
     function setPayoutLevel(address, level) {
-		console.log(api + '/set_miner_payout_level?address=' + address + '&level=' + level);
         $.ajax({
             url: api + '/set_miner_payout_level?address=' + address + '&level=' + level,
             dataType: 'json',
