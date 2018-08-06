@@ -58,7 +58,7 @@
       "addressSeparator": "."
     },
     "shareTrust": {
-      "enabled": true,
+      "enabled": false,
       "min": 10,
       "stepDown": 3,
       "threshold": 10,
