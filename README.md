@@ -1,4 +1,4 @@
-turtle-pool
+turtle-pool (for nodejs 10.x)
 ====================
 Formerly known as cryptonote-forknote-pool, forked from Forknote Project.
 
