@@ -59,10 +59,12 @@
     },
     "shareTrust": {
       "enabled": false,
-      "min": 10,
-      "stepDown": 3,
+      "maxTrustPercent": 50,
+      "probabilityStepPercent": 1,
       "threshold": 10,
-      "penalty": 30
+      "penaltyMultiplier": 1,
+      "minUntrustedSeconds": 300,
+      "maxTrustedDifficulty": 100000
     },
     "banning": {
       "enabled": true,
