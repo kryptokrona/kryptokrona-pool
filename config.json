@@ -61,10 +61,10 @@
       "enabled": false,
       "maxTrustPercent": 50,
       "probabilityStepPercent": 1,
-      "threshold": 10,
-      "penaltyMultiplier": 1,
+      "minUntrustedShares": 10,
       "minUntrustedSeconds": 300,
-      "maxTrustedDifficulty": 100000
+      "maxTrustedDifficulty": 100000,
+      "penaltyMultiplier": 1
     },
     "banning": {
       "enabled": true,
