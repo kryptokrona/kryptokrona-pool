@@ -222,11 +222,20 @@ Explanation for each field:
     /* Feature to trust share difficulties from miners which can
        significantly reduce CPU load. */
     "shareTrust": {
-        "enabled": true,
-        "min": 10, //Minimum percent probability for share hashing
-        "stepDown": 3, //Increase trust probability % this much with each valid share
-        "threshold": 10, //Amount of valid shares required before trusting begins
-        "penalty": 30 //Upon breaking trust require this many valid share before trusting
+      "enabled": false, //enable or disable the shareTrust system. shareTrust can offer significant CPU workload reduction, however does present a risk of being exploited by miners gaming the percentages of the system.
+      "maxTrustPercent": 50, //The maximum percent chance a share will be considered trusted (not fully validated) 50 means 1 of 2 shares are fully validated at random, 75 means 1 of 4 are fully validated (or 3 of 4 are trusted).
+      "probabilityStepPercent": 1, //The percent the probabality of a share is trusted increases from 0 to maxTrustPercent at a maximum rate of once per probabilityStepWindow seconds in steps of probabilityStepPercent and only on share submission.
+      "probabilityStepWindow": 30, //The probability (chance a share is considered trusted) will increase from 0 to maxTrustPercent by steps of probabilityStepPercent at a maximum rate of once every probabilityStepWindow seconds.
+      "minUntrustedShares": 50, //The minimum amount of shares that will be fully validated before shareTrust will begin.
+      "minUntrustedSeconds": 300, //The minimum amount of time in seconds shares will be fully validated before shareTrust will begin.
+      "maxTrustedDifficulty": 100000, //Shares above this difficulty will be fully validated (not trusted).
+      "maxPenaltyMultiplier": 100, //The maximum penalty multiplied against minUntrustedShares and minUntrustedSeconds.
+      "minPenaltyMultiplier": 2, //The minimum penalty multiplied against minUntrustedShares and minUntrustedSeconds.
+      "penaltyMultiplierStep": 1, //The penalty is multiplied against minUntrustedShares and minUntrustedSeconds. The penalty Steps up/down penaltyMultiplierStep a maximum of once per every penaltyStepUpWindow or penaltyStepDownWindow and only on share submission.
+      "penaltyStepUpWindow": 30, //The penalty steps up a maximum of penaltyMultiplierStep every penaltyStepUpWindow seconds and only on share submission.
+      "penaltyStepDownWindow": 120, //The penalty steps down a maximum of penaltyMultiplierStep every penaltyStepDownWindow seconds and only on share submission.
+      "maxShareWindow": 300, //Must Submit within this window or minUntrustedSeconds, minUntrustedShares and Probability are reset.
+      "maxAge": 604800 //Maximum seconds to retain dissconnected miner shareTrust data in memory.
     },
 
     /* If under low-diff share attack we can ban their IP to reduce system/network load. */

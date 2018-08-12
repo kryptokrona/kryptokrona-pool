@@ -61,10 +61,17 @@
       "enabled": false,
       "maxTrustPercent": 50,
       "probabilityStepPercent": 1,
-      "minUntrustedShares": 10,
+      "probabilityStepWindow": 30,
+      "minUntrustedShares": 50,
       "minUntrustedSeconds": 300,
       "maxTrustedDifficulty": 100000,
-      "penaltyMultiplier": 1
+      "maxPenaltyMultiplier": 100,
+      "minPenaltyMultiplier": 2,
+      "penaltyMultiplierStep": 1,
+      "penaltyStepUpWindow": 30,
+      "penaltyStepDownWindow": 120,
+      "maxShareWindow": 300,
+      "maxAge": 604800
     },
     "banning": {
       "enabled": true,
