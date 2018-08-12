@@ -61,7 +61,7 @@
       "enabled": false,
       "maxTrustPercent": 50,
       "probabilityStepPercent": 1,
-      "probabilityStepWindow": 30,
+      "probabilityStepWindow": 15,
       "minUntrustedShares": 50,
       "minUntrustedSeconds": 300,
       "maxTrustedDifficulty": 100000,
