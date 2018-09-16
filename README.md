@@ -118,6 +118,22 @@ Installing pool on different Linux distributives is different because it depends
 sudo apt-get install -y git build-essential redis-server libboost1.55-all-dev cmake libssl-dev node-gyp
 ```
 
+##### Debian 9 installation
+These are the steps taken to install pool on Debian 9.  These steps will also work on Ubuntu 16 & 18:
+
+```bash
+sudo apt-get install -y git curl wget screen build-essential redis-server libboost-all-dev cmake libssl-dev node-gyp
+```
+I have currently tested this on Node 8.11.1 and 8.12.0 Install Node found here (https://nodejs.org/en/download/package-manager/)
+```bash
+curl -sL https://deb.nodesource.com/setup_8.x | sudo -E bash -
+sudo apt-get install -y nodejs
+```
+
+I have found using a screen session to keep everything running on the server works well.  Grab your most recent TurtleCoin 
+release (https://github.com/turtlecoin/turtlecoin/releases/) then launch your daemon and sync your chain.  Once your daemon 
+is synced with the network start your turtle-service and redis-server
+
 
 #### 1) Downloading & Installing
 
