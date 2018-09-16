@@ -96,7 +96,7 @@ Usage
 
 #### Requirements
 * Turtlecoind daemon
-* walletd
+* turtle-service
 * [Node.js](http://nodejs.org/) LTS (6,8,10) ([follow these installation instructions](https://nodejs.org/en/download/package-manager/#debian-and-ubuntu-based-linux-distributions))
 * [Redis](http://redis.io/) key-value store v2.6+ ([follow these instructions](http://redis.io/topics/quickstart))
 * libssl required for the node-multi-hashing module
@@ -124,16 +124,22 @@ These are the steps taken to install pool on Debian 9.  These steps will also wo
 ```bash
 sudo apt-get install -y git curl wget screen build-essential redis-server libboost-all-dev cmake libssl-dev node-gyp
 ```
-I have currently tested this on Node 8.11.1 and 8.12.0 Install Node found here (https://nodejs.org/en/download/package-manager/)
+I have currently tested this on Node 8.11.1 and 8.12.0.
+
+You can install node here: (https://nodejs.org/en/download/package-manager/)
+
+Or directly from a terminal:
+
 ```bash
 curl -sL https://deb.nodesource.com/setup_8.x | sudo -E bash -
 sudo apt-get install -y nodejs
 ```
 
-I have found using a screen session to keep everything running on the server works well.  Grab your most recent TurtleCoin 
-release (https://github.com/turtlecoin/turtlecoin/releases/) then launch your daemon and sync your chain.  Once your daemon 
-is synced with the network start your turtle-service and redis-server
+I have found using a screen session to keep everything running on the server works well.
 
+Grab your most recent TurtleCoin release (https://github.com/turtlecoin/turtlecoin/releases/) then launch your daemon and sync your chain.
+
+Once your daemon is synced with the network start your turtle-service and redis-server.
 
 #### 1) Downloading & Installing
 
