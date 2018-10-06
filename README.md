@@ -85,6 +85,7 @@ Comes with lightweight example front-end script which uses the pool's AJAX API.
 * [CryptoNote Forum](https://forum.cryptonote.org/)
 * [CryptoNote Universal Pool Forum](https://bitcointalk.org/index.php?topic=705509)
 * [Forknote](https://forknote.net)
+* [TurtleCoin](http://chat.turtlecoin.lol)
 
 #### Pools Using This Software
 
@@ -113,12 +114,12 @@ npm install -g windows-build-tools --vs2015
 ##### Seriously
 Those are legitimate requirements. If you use old versions of Node.js or Redis that may come with your system package manager then you will have problems. Follow the linked instructions to get the last stable versions.
 
-
 [**Redis security warning**](http://redis.io/topics/security): be sure firewall access to redis - an easy way is to
 include `bind 127.0.0.1` in your `redis.conf` file. Also it's a good idea to learn about and understand software that
 you are using - a good place to start with redis is [data persistence](http://redis.io/topics/persistence).
 
 ##### Easy install on Ubuntu 14 LTS
+
 Installing pool on different Linux distributives is different because it depends on system default components and versions. For now the easiest way to install pool is to use Ubuntu 14 LTS. Thus, all you had to do in order to prepare Ubunty 14 for pool installation is to run:
 
 ```bash
@@ -150,12 +151,12 @@ Once your daemon is synced with the network start your turtle-service and redis-
 
 #### 1) Downloading & Installing
 
-Clone the repository and run `npm update` for all the dependencies to be installed:
+Clone the repository and run `npm install` for all the dependencies to be installed:
 
 ```bash
-git clone https://github.com/turtlecoin/turtle-pool pool
-cd pool
-npm update
+git clone https://github.com/turtlecoin/turtle-pool turtle-pool
+cd turtle-pool
+npm install && npm test
 ```
 
 #### 2) Configuration
