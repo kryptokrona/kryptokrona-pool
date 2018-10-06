@@ -102,6 +102,13 @@ Usage
 * libssl required for the node-multi-hashing module
   * For Ubuntu: `sudo apt-get install -y libssl-dev`
 
+##### Windows Support
+
+You will need the windows build tools to install this module (and many more) on windows. Run the following command to set up your environment.
+
+```bash
+npm install -g windows-build-tools --vs2015
+```
 
 ##### Seriously
 Those are legitimate requirements. If you use old versions of Node.js or Redis that may come with your system package manager then you will have problems. Follow the linked instructions to get the last stable versions.
