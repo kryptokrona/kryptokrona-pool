@@ -10,6 +10,9 @@
         "type": "git",
         "url": "https://github.com/turtlecoin/turtle-pool"
     },
+    "scripts": {
+        "test": "node tests/dependencyTests.js"
+    },
     "dependencies": {
         "async": "1",
         "base58-native": "*",
