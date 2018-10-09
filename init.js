@@ -127,6 +127,7 @@ function spawnPoolWorkers () {
 
   var poolWorkers = {}
 
+  if (!cluster.isMaster) return
   var createPoolWorker = function (forkId) {
     var worker = cluster.fork({
       workerType: 'pool',
@@ -174,6 +175,7 @@ function spawnPoolWorkers () {
 function spawnBlockUnlocker () {
   if (!global.config.blockUnlocker || !global.config.blockUnlocker.enabled) return
 
+  if (!cluster.isMaster) return
   var worker = cluster.fork({
     workerType: 'blockUnlocker'
   })
@@ -188,6 +190,7 @@ function spawnBlockUnlocker () {
 function spawnPaymentProcessor () {
   if (!global.config.payments || !global.config.payments.enabled) return
 
+  if (!cluster.isMaster) return
   var worker = cluster.fork({
     workerType: 'paymentProcessor'
   })
@@ -202,6 +205,7 @@ function spawnPaymentProcessor () {
 function spawnApi () {
   if (!global.config.api || !global.config.api.enabled) return
 
+  if (!cluster.isMaster) return
   var worker = cluster.fork({
     workerType: 'api'
   })
@@ -220,6 +224,7 @@ function spawnCli () {
 function spawnChartsDataCollector () {
   if (!global.config.charts) return
 
+  if (!cluster.isMaster) return
   var worker = cluster.fork({
     workerType: 'chartsDataCollector'
   })
