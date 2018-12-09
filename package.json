@@ -11,7 +11,7 @@
         "url": "https://github.com/turtlecoin/turtle-pool"
     },
     "scripts": {
-        "test": "node tests/dependencyTests.js"
+        "test": "npm install && node tests/dependencyTests.js"
     },
     "dependencies": {
         "async": "1",
