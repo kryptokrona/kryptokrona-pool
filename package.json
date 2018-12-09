@@ -17,12 +17,12 @@
         "async": "1",
         "base58-native": "*",
         "bignum": "*",
-        "cli-color": "*",
+        "cli-color": "^1.4.0",
         "dateformat": "*",
         "redis": "*",
         "safe-buffer": "^5.1.2",
-        "turtlecoin-cryptonote-util": "0.0.5",
-        "turtlecoin-multi-hashing": "0.0.14"
+        "turtlecoin-cryptonote-util": "0.0.6",
+        "turtlecoin-multi-hashing": "0.0.17"
     },
     "engines": {
         "node": ">=6"
