@@ -555,12 +555,19 @@ enable-cors=*
 ```
 
 * Launch forknoted with the corresponding config file
-* Change the following line in the pool's frontend config.json:
+* Change the following line in the pool's frontend config.js:
 
 ```
 var api_blockexplorer = "http://daemonhost.com:1118";
 ```
 
+* Finally, edit these variables in the pool's frontend config.js using this syntax:
+
+```
+var blockchainExplorer = 'http://poolhost/?hash={id}'
+
+var transactionExplorer = 'http://poolhost/?hash={id}#blockchain_transaction'
+```
 
 Credits
 ===
