@@ -564,7 +564,7 @@ var api_blockexplorer = "http://daemonhost.com:1118";
 * Finally, edit these variables in the pool's frontend config.js using this syntax:
 
 ```
-var blockchainExplorer = 'http://poolhost/?hash={id}'
+var blockchainExplorer = 'http://poolhost/?hash={id}#blockchain_block'
 
 var transactionExplorer = 'http://poolhost/?hash={id}#blockchain_transaction'
 ```
