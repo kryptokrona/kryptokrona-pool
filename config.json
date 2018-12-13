@@ -86,10 +86,12 @@
   },
   "payments": {
     "enabled": true,
+    "allowPaymentId": true,
     "interval": 120,
     "maxAddresses": 50,
     "transferFee": 100,
     "minPayment": 100000,
+    "minPaymentIdPayment": 10000000,
     "maxTransactionAmount": 0,
     "denomination": 100
   },
