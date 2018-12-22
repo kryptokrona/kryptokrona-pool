@@ -1,21 +1,19 @@
 {
-    "coin": "turtlecoin",
-    "symbol": "TRTL",
-    "coinUnits": 100,
-    "coinDifficultyTarget": 30,
-
-    "logging": {
-        "files": {
-            "level": "info",
-            "directory": "logs",
-            "flushInterval": 5
-        },
-        "console": {
-            "level": "info",
-            "colors": true
-        }
+  "coin": "turtlecoin",
+  "symbol": "TRTL",
+  "coinUnits": 100,
+  "coinDifficultyTarget": 30,
+  "logging": {
+    "files": {
+      "level": "info",
+      "directory": "logs",
+      "flushInterval": 5
     },
-
+    "console": {
+      "level": "info",
+      "colors": true
+    }
+  },
   "poolServer": {
     "enabled": true,
     "clusterForks": "auto",
@@ -86,108 +84,102 @@
       "lastBlockCheckRate": 1
     }
   },
-
-    "payments": {
-        "enabled": true,
-        "interval": 120,
-        "maxAddresses": 50,
-        "transferFee": 100,
-        "minPayment": 100000,
-        "maxTransactionAmount": 0,
-        "denomination": 100
-    },
-
-    "blockUnlocker": {
-        "enabled": true,
-        "interval": 30,
-        "depth": 40,
-        "poolFee": 2,
-        "devDonation": 0.1,
-        "coreDevDonation": 0.1,
-        "extraFeaturesDevDonation":0.1
-    },
-
-    "api": {
-        "enabled": true,
-        "hashrateWindow": 600,
-        "updateInterval": 5,
-        "host": "127.0.0.1",
-        "port": 8117,
-        "blocks": 30,
-        "payments": 30,
-        "password": "your_password"
-    },
-
+  "payments": {
+    "enabled": true,
+    "allowPaymentId": true,
+    "interval": 120,
+    "maxAddresses": 50,
+    "transferFee": 100,
+    "minPayment": 100000,
+    "minPaymentIdPayment": 10000000,
+    "maxTransactionAmount": 0,
+    "denomination": 100
+  },
+  "blockUnlocker": {
+    "enabled": true,
+    "interval": 30,
+    "depth": 40,
+    "poolFee": 2,
+    "devDonation": 0.1,
+    "coreDevDonation": 0.1,
+    "extraFeaturesDevDonation": 0.1
+  },
+  "api": {
+    "enabled": true,
+    "hashrateWindow": 600,
+    "updateInterval": 5,
+    "host": "127.0.0.1",
+    "port": 8117,
+    "blocks": 30,
+    "payments": 30,
+    "password": "your_password"
+  },
+  "daemon": {
+    "host": "127.0.0.1",
+    "port": 11898
+  },
+  "wallet": {
+    "host": "127.0.0.1",
+    "port": 8070,
+    "password": "<replace with rpc password>"
+  },
+  "redis": {
+    "host": "127.0.0.1",
+    "port": 6379
+  },
+  "monitoring": {
     "daemon": {
-        "host": "127.0.0.1",
-        "port": 11898
+      "checkInterval": 60,
+      "rpcMethod": "getblockcount"
     },
-
     "wallet": {
-        "host": "127.0.0.1",
-        "port": 8070,
-        "password": "<replace with rpc password>"
-    },
-
-    "redis": {
-        "host": "127.0.0.1",
-        "port": 6379
-    },
-
-    "monitoring": {
-        "daemon": {
-            "checkInterval": 60,
-            "rpcMethod": "getblockcount"
-        },
-        "wallet": {
-            "checkInterval": 60,
-            "rpcMethod": "getBalance"
-        }
-    },
-
-    "charts": {
-        "pool": {
-            "hashrate": {
-                "enabled": true,
-                "updateInterval": 60,
-                "stepInterval": 1800,
-                "maximumPeriod": 86400
-            },
-            "workers": {
-                "enabled": true,
-                "updateInterval": 60,
-                "stepInterval": 1800,
-                "maximumPeriod": 86400
-            },
-            "difficulty": {
-                "enabled": true,
-                "updateInterval": 1800,
-                "stepInterval": 10800,
-                "maximumPeriod": 604800
-            },
-            "price": {
-                "enabled": true,
-                "updateInterval": 1800,
-                "stepInterval": 10800,
-                "maximumPeriod": 604800
-            },
-            "profit": {
-                "enabled": true,
-                "updateInterval": 1800,
-                "stepInterval": 10800,
-                "maximumPeriod": 604800
-            }
-        },
-        "user": {
-            "hashrate": {
-                "enabled": true,
-                "updateInterval": 180,
-                "stepInterval": 1800,
-                "maximumPeriod": 86400
-            },
-            "payments": {
-                "enabled": true
-            }
-        }
+      "checkInterval": 60,
+      "rpcMethod": "getBalance"
     }
+  },
+  "charts": {
+    "pool": {
+      "hashrate": {
+        "enabled": true,
+        "updateInterval": 60,
+        "stepInterval": 1800,
+        "maximumPeriod": 86400
+      },
+      "workers": {
+        "enabled": true,
+        "updateInterval": 60,
+        "stepInterval": 1800,
+        "maximumPeriod": 86400
+      },
+      "difficulty": {
+        "enabled": true,
+        "updateInterval": 1800,
+        "stepInterval": 10800,
+        "maximumPeriod": 604800
+      },
+      "price": {
+        "enabled": true,
+        "updateInterval": 1800,
+        "stepInterval": 10800,
+        "maximumPeriod": 604800
+      },
+      "profit": {
+        "enabled": true,
+        "updateInterval": 1800,
+        "stepInterval": 10800,
+        "maximumPeriod": 604800
+      }
+    },
+    "user": {
+      "hashrate": {
+        "enabled": true,
+        "updateInterval": 180,
+        "stepInterval": 1800,
+        "maximumPeriod": 86400
+      },
+      "payments": {
+        "enabled": true
+      }
+    }
+  }
 }

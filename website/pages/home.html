@@ -274,7 +274,7 @@
     <hr class="yourStats">
 	<h4 class="yourStats">Payout level</h4>
 	<p class="yourStats">If you prefer a higher payout level than the pool's default then this is
-	where you can change it for your miners. (Minimum payout: <span id="min_payout"></span>)</p>
+	where you can change it for your miners.<br>(Minimum payout: <span id="min_payout"></span><span id="min_payout_paymentid"></span>)</p>
 	
 	<div class="form-inline yourStats">
 		<div class="form-group">
@@ -505,6 +505,9 @@
     });
 
 	updateText('min_payout', getReadableCoins(lastStats.config.minPaymentThreshold, 2));
+  if (lastStats.config.paymentIdSupported) {
+    updateText('min_payout_paymentid', ' with Payment ID: ' + getReadableCoins(lastStats.config.paymentIdMinPaymentAmount, 2))
+  }
 
     /* Stats by mining address lookup */
 

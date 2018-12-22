@@ -22,7 +22,8 @@
         "redis": "*",
         "safe-buffer": "^5.1.2",
         "turtlecoin-cryptonote-util": "0.0.6",
-        "turtlecoin-multi-hashing": "0.0.18"
+        "turtlecoin-multi-hashing": "0.0.18",
+        "turtlecoin-utils": "git+https://github.com/turtlecoin/turtlecoin-utils.git"
     },
     "engines": {
         "node": ">=6"
