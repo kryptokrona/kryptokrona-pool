@@ -73,7 +73,7 @@ async.series([
       })
 
       async.map(blocks, function (block, mapCback) {
-        apiInterfaces.rpcDaemon('getblockheaderbyheight', {height: block.height}, function (error, result) {
+        apiInterfaces.rpcDaemon('getblockheaderbyheight', { height: block.height }, function (error, result) {
           if (error) {
             log('error', logSystem, 'Error with getblockheaderbyheight RPC request for block %s - %j', [block.serialized, error])
             mapCback(null, block)
