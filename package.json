@@ -1,6 +1,6 @@
 {
     "name": "turtle-pool",
-    "version": "0.0.9",
+    "version": "0.0.10",
     "license": "GPL-2.0",
     "authors": "Matthew Little",
     "contributors": [
@@ -23,7 +23,7 @@
         "safe-buffer": "^5.1.2",
         "turtlecoin-cryptonote-util": "0.0.6",
         "turtlecoin-multi-hashing": "0.0.18",
-        "turtlecoin-utils": "git+https://github.com/turtlecoin/turtlecoin-utils.git"
+        "turtlecoin-utils": "0.0.2"
     },
     "engines": {
         "node": ">=6"
