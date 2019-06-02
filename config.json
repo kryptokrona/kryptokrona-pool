@@ -1,8 +1,8 @@
 {
-  "coin": "turtlecoin",
-  "symbol": "TRTL",
+  "coin": "kryptokrona",
+  "symbol": "XKR",
   "coinUnits": 100,
-  "coinDifficultyTarget": 30,
+  "coinDifficultyTarget": 90,
   "logging": {
     "files": {
       "level": "info",
@@ -17,7 +17,7 @@
   "poolServer": {
     "enabled": true,
     "clusterForks": "auto",
-    "poolAddress": "TRTLv3mnq2wS6GepH6nb628jEjFseeojACYToJ1BXaZNNEvLkzW327zTVCh7ncGtS2MU2usGNq9ygVwiCTTft9QkN3t5P2Xqv3f",
+    "poolAddress": "SEKReTyRMJx2LTUrbf2r7GdMJ9PY5yHbYN6MCZkKUVvKZSwwwf3HnUS6Jia3TkD4jWgfxeh1AEYV3DKEAesSb7mSAvNqfCNBXrg",
     "blockRefreshInterval": 1000,
     "minerTimeout": 3600,
     "ports": [
@@ -92,7 +92,7 @@
     "transferFee": 100,
     "minPayment": 100000,
     "minPaymentIdPayment": 10000000,
-    "maxTransactionAmount": 0,
+    "maxTransactionAmount": 100000000,
     "denomination": 100
   },
   "blockUnlocker": {
