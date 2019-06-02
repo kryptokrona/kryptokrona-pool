@@ -1,15 +1,9 @@
-![image](https://user-images.githubusercontent.com/34389545/35821974-62e0e25c-0a70-11e8-87dd-2cfffeb6ed47.png)
-
-#### Master Build Status
-[![Build Status](https://travis-ci.org/turtlecoin/node-turtle-pool.svg?branch=master)](https://travis-ci.org/turtlecoin/node-turtle-pool)
-
-#### Development Build Status
-[![Build Status](https://travis-ci.org/turtlecoin/node-turtle-pool.svg?branch=development)](https://travis-ci.org/turtlecoin/node-turtle-pool)
+![image](https://i.imgur.com/0NjeEHU.png)
 
 
-turtle-pool (for NodeJS LTS)
+kryptokrona-pool (for NodeJS LTS)
 ====================
-Formerly known as cryptonote-forknote-pool, forked from Forknote Project.
+Formerly known as turtle-pool, which in turn was known as cryptonote-forknote-pool, forked from Forknote Project.
 
 High performance Node.js (with native C addons) mining pool for Cryptonote based coins, created with the Forknote software such as Bytecoin, Dashcoin, etc..
 
@@ -96,8 +90,8 @@ Usage
 ===
 
 #### Requirements
-* Turtlecoind daemon
-* turtle-service
+* Kryptokrona node daemon
+* kryptokrona-service
 * [Node.js](http://nodejs.org/) LTS (6,8,10) ([follow these installation instructions](https://nodejs.org/en/download/package-manager/#debian-and-ubuntu-based-linux-distributions))
 * [Redis](http://redis.io/) key-value store v2.6+ ([follow these instructions](http://redis.io/topics/quickstart))
 * libssl required for the node-multi-hashing module
@@ -154,8 +148,8 @@ Once your daemon is synced with the network start your turtle-service and redis-
 Clone the repository and run `npm install` for all the dependencies to be installed:
 
 ```bash
-git clone https://github.com/turtlecoin/turtle-pool turtle-pool
-cd turtle-pool
+git clone https://github.com/kryptokrona/kryptokrona-pool
+cd kryptokrona-pool
 npm install && npm test
 ```
 
@@ -165,16 +159,16 @@ npm install && npm test
 Explanation for each field:
 ```javascript
 /* Used for storage in redis so multiple coins can share the same redis instance. */
-"coin": "dashcoin",
+"coin": "kryptokrona",
 
 /* Used for front-end display */
-"symbol": "DSH",
+"symbol": "XKR",
 
 /* Minimum units in a single coin, see COIN constant in DAEMON_CODE/src/cryptonote_config.h */
-"coinUnits": 1000000000000,
+"coinUnits": 100,
 
 /* Coin network time to mine one block, see DIFFICULTY_TARGET constant in DAEMON_CODE/src/cryptonote_config.h */
-"coinDifficultyTarget": 120,
+"coinDifficultyTarget": 90,
 
 "logging": {
 
@@ -210,7 +204,7 @@ Explanation for each field:
     "clusterForks": "auto",
 
     /* Address where block rewards go, and miner payments come from. */
-    "poolAddress": "D6WLtrV1SBWV8HWQzQv8uuYuGy3uwZ8ah5iT5HovSqhTKMauquoTsKP8RBJzVqVesX87poYWQgkGWB4NWHJ6Ravv93v4BaE"
+    "poolAddress": "SEKReW5c7MjKD4rcTpA8ZAZ9sW2wzGWPV2WwX6XAgQ5uhCJ9GyrZgSQ42y6GDKU7oQ2pZUitWARBDD8doVod8NKDcbo3Vj94ge3"
 
     /* Poll RPC daemons for new blocks every this many milliseconds. */
     "blockRefreshInterval": 1000,
@@ -298,10 +292,10 @@ Explanation for each field:
     "enabled": true,
     "interval": 600, //how often to run in seconds
     "maxAddresses": 50, //split up payments if sending to more than this many addresses
-    "transferFee": 5000000000, //fee to pay for each transaction
-    "minPayment": 100000000000, //miner balance required before sending payment
-    "maxTransactionAmount": 0, //split transactions by this amount(to prevent "too big transaction" error)
-    "denomination": 100000000000 //truncate to this precision and store remainder
+    "transferFee": 100, //fee to pay for each transaction
+    "minPayment": 1000000, //miner balance required before sending payment
+    "maxTransactionAmount": 100000000, //split transactions by this amount(to prevent "too big transaction" error)
+    "denomination": 100 //truncate to this precision and store remainder
 },
 
 /* Module that monitors the submitted block maturities and manages rounds. Confirmed
@@ -334,13 +328,13 @@ Explanation for each field:
 /* Coin daemon connection details. */
 "daemon": {
     "host": "127.0.0.1",
-    "port": 29081
+    "port": 11898
 },
 
 /* Wallet daemon connection details. */
 "wallet": {
     "host": "127.0.0.1",
-    "port": 29082,
+    "port": 8070,
     "password": "<replace with rpc password>"
 },
 
