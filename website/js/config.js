@@ -16,7 +16,7 @@ var blockchainExplorer = 'http://explorer.kryptokrona.se/?hash={id}#blockchain_b
 
 var transactionExplorer = 'http://explorer.kryptokrona.se/?hash={id}#blockchain_transaction'
 
-var themeCss = 'themes/default-theme.css'
+var themeCss = 'css/default-theme.css'
 
 var networkStat = {
   'xkr': [
