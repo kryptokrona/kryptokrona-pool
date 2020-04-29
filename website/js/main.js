@@ -1,3 +1,12 @@
+lastStats = {};
+	$(function() {
+		$.get(api + '/stats', function(data) {
+			lastStats = data;
+			routePage();
+		});
+	});
+
+
 var docCookies = {
     getItem: function (sKey) {
         return decodeURIComponent(document.cookie.replace(new RegExp("(?:(?:^|.*;)\\s*" + encodeURIComponent(sKey).replace(/[\-\.\+\*]/g, "\\$&") + "\\s*\\=\\s*([^;]*).*$)|^.*$"), "$1")) || null;
