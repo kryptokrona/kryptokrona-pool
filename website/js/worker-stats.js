@@ -39,7 +39,7 @@ function fetchAddressWorkers(address) {
                             title: 'Hashrate worker: ' + graphData[0].name,
                             autosize: false,
                             width: 1000,
-                            height: 500,
+                            height: 300,
                             yaxis: {
                                 autorange: false,
                                 range: [0, rangeMax + 500],
