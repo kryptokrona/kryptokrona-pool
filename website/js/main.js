@@ -1,11 +1,10 @@
-lastStats = {};
-	$(function() {
-		$.get(api + '/stats', function(data) {
-			lastStats = data;
-			routePage();
-		});
-	});
-
+$(document).ready(function(){
+       $.get(api + '/stats', function(data){
+            lastStats = data;
+            updateIndex();
+            routePage(fetchLiveStats);
+        });
+});
 
 var docCookies = {
     getItem: function (sKey) {
@@ -238,10 +237,7 @@ function routePage(loadedCallback) {
 }
 
 function updateIndex() {
-    updateText('coinName', lastStats.config.coin);
-    var title = $(".navbar-brand").text();
-    $("title").text(title.charAt(0).toUpperCase() + title.slice(1));
-    updateText('poolVersion', lastStats.config.version);
+	return;
 }
 
 function getBlockchainUrl(id) {
