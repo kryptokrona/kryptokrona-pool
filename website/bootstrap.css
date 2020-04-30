@@ -35,7 +35,7 @@ html {
   progress,
   video {
     display: inline-block;
-    vertical-align: baseline;
+    vertical-align: baseline
   }
   
   audio:not([controls]) {
@@ -884,13 +884,15 @@ html {
   }
   
   @media (min-width:768px) {
-   
-
+    .container {
+      width: 750px
+    }
   }
   
   @media (min-width:992px) {
-    
-    
+    .container {
+      width: 970px
+    }
   }
   
   @media (min-width:1200px) {
@@ -907,9 +909,6 @@ html {
   }
   
   .row {
-    display: flex;
-    flex-direction: row-reverse;
-    justify-content: space-evenly;
     margin-left: -15px;
     margin-right: -15px
   }
@@ -1898,7 +1897,7 @@ html {
   }
   
   .table .table {
-    background-color: #333333
+    background-color: rgb(1, 38, 63)
   }
   
   .table-condensed>thead>tr>th,
@@ -1930,12 +1929,12 @@ html {
   
   .table-striped>tbody>tr:nth-child(odd)>td,
   .table-striped>tbody>tr:nth-child(odd)>th {
-    background-color: #33333356
+    background-color: rgb(1, 38, 63)
   }
   
   .table-hover>tbody>tr:hover>td,
   .table-hover>tbody>tr:hover>th {
-    background-color: #33333356
+    background-color: rgb(1, 38, 63)
   }
   
   table col[class*=col-] {
@@ -2068,7 +2067,7 @@ html {
       overflow-y: hidden;
       overflow-x: scroll;
       -ms-overflow-style: -ms-autohiding-scrollbar;
-      border: none;
+      border: 1px solid rgb(1, 38, 63);
       -webkit-overflow-scrolling: touch
     }
   
@@ -5068,21 +5067,21 @@ html {
   .navbar-inverse .navbar-nav>.disabled>a,
   .navbar-inverse .navbar-nav>.disabled>a:hover,
   .navbar-inverse .navbar-nav>.disabled>a:focus {
-    color: #333333;
+    color: rgb(1, 38, 63);
     background-color: transparent
   }
   
   .navbar-inverse .navbar-toggle {
-    border-color: none;
+    border-color: #90f2ff23;
   }
   
   .navbar-inverse .navbar-toggle:hover,
   .navbar-inverse .navbar-toggle:focus {
-    background-color: #333333
+    background-color: rgb(1, 38, 63)
   }
   
   .navbar-inverse .navbar-toggle .icon-bar {
-    background-color: #c2c2c2
+    background-color: #90f2ff8c
   }
   
   .navbar-inverse .navbar-collapse,
@@ -5094,7 +5093,7 @@ html {
   .navbar-inverse .navbar-nav>.open>a:hover,
   .navbar-inverse .navbar-nav>.open>a:focus {
     background-color: #080808;
-    color: #c2c2c2
+    color: #90f2ff8c
   }
   
   @media (max-width:767px) {
@@ -7111,8 +7110,7 @@ html {
   }
   
   .visible-print {
-    display: none !important;
-    color: rgb(27, 16, 35)
+    display: none !important
   }
   
   @media print {
@@ -7131,4 +7129,4 @@ html {
     th.visible-print,
     td.visible-print {
       display: table-
-    }}
+  

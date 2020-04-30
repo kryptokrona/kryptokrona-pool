@@ -3,18 +3,18 @@ a {
 }
 
 a:hover {
-  color: #000000;
+  color: #90f2ff;
 }
 
 body {
 
-  background: #e3e3e3;
+  background: #888888;
   line-height: 1.428571429;
   color: #0101018f;
 }
 
 tbody:hover {
-  background: transparent;
+  background: #888888;
 }
 
 .tex-muted {
@@ -111,7 +111,7 @@ tbody:hover {
 }
 
 hr {
-  border-top-color: #01010120;
+  border-top-color: #0101018f;
 }
 
 .stats>div:not(#addressError) {
@@ -130,7 +130,6 @@ hr {
   background-color: #333333;
   color: #c2c2c2;
   border: none;
-  border-radius: 10px;
 }
 
 .form-control::placeholder {
@@ -147,7 +146,7 @@ hr {
 
 .btn-default {
   background-color: #333333;
-  color: #c2c2c2;
+  color: #0101018f;
   border: 1px solid #333333;
 }
 
@@ -156,9 +155,9 @@ hr {
 .btn-default:active,
 .btn-default.active,
 .open>.dropdown-toggle.btn-default {
-  color: #e6e6e6;
-  background-color: #1f1f1f;
-  border-color: #1f1f1f;
+  color: #90f2ff;
+  background-color: rgb(1, 49, 82);
+  border-color: rgb(1, 49, 82);
 }
 
 .btn-default:active,
@@ -218,7 +217,7 @@ code {
 .table>thead>tr.success>th,
 .table>tbody>tr.success>th,
 .table>tfoot>tr.success>th {
-  background-color: #8888881c;
+  background-color: #888888;
 }
 
 .table-hover>tbody>tr>td.success:hover,
@@ -322,4 +321,3 @@ a.list-group-item.active:focus {
   color: #fff;
   background-color: #0101018f;
 }
-
