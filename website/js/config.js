@@ -1,4 +1,4 @@
-var api = 'http://pool.kryptokrona.se:8117'
+var api = 'https://gota.kryptokrona.se/api'
 
 var api_blockexplorer = 'https://explorer.kryptokrona.se/api'
 
