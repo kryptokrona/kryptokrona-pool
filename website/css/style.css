@@ -6478,7 +6478,7 @@ fieldset[disabled] .btn-primary.active {
 a.list-group-item.active,
 a.list-group-item.active:hover,
 a.list-group-item.active:focus {
-  color: #0101018f;
+  
   background-color: #0101018f;
   border-color: #0101018f;
 }
@@ -6584,6 +6584,30 @@ a.list-group-item.active:focus {
 .table-hover>tbody>tr.success:hover>th {
   background-color: #181818;
 }
+
+.adminStats {
+  background: transparent;
+}
+
+.adminStats>div {
+  font-size: 1.2rem;
+  color: hsl(0, 1%, 65%);
+  -webkit-box-shadow: inset 0px 0px 0 1px #0101018f;
+  box-shadow: inset 0px 0px 0 1px #0101018f;
+  background-color: hsl(0, 0%, 25%);
+}
+
+.list-group-item {
+  color: hsl(0, 1%, 65%);
+  background-color: hsl(0, 0%, 11%);
+  border: transparent;
+}
+
+a.list-group-item:hover, a.list-group-item:focus {
+  color: rgb(210, 210, 210);
+  background-color: hsl(0, 0%, 11%);
+}
+
 
 }
 
