@@ -1875,12 +1875,12 @@ html {
     padding: 8px;
     line-height: 1.42857143;
     vertical-align: top;
-    border-top: 1px solid #ddd
+    border: none
   }
   
   .table>thead>tr>th {
     vertical-align: bottom;
-    border-bottom: 2px solid #ddd
+    border: none
   }
   
   .table>caption+thead>tr:first-child>th,
@@ -1893,11 +1893,11 @@ html {
   }
   
   .table>tbody+tbody {
-    border-top: 2px solid #ddd
+    border: none
   }
   
   .table .table {
-    background-color: #fff
+    background-color: rgb(1, 38, 63)
   }
   
   .table-condensed>thead>tr>th,
@@ -2067,7 +2067,7 @@ html {
       overflow-y: hidden;
       overflow-x: scroll;
       -ms-overflow-style: -ms-autohiding-scrollbar;
-      border: 1px solid #ddd;
+      border: 1px solid rgb(1, 38, 63);
       -webkit-overflow-scrolling: touch
     }
   
@@ -5067,33 +5067,33 @@ html {
   .navbar-inverse .navbar-nav>.disabled>a,
   .navbar-inverse .navbar-nav>.disabled>a:hover,
   .navbar-inverse .navbar-nav>.disabled>a:focus {
-    color: #444;
+    color: rgb(1, 38, 63);
     background-color: transparent
   }
   
   .navbar-inverse .navbar-toggle {
-    border-color: #333
+    border-color: rgb(1, 38, 63)
   }
   
   .navbar-inverse .navbar-toggle:hover,
   .navbar-inverse .navbar-toggle:focus {
-    background-color: #333
+    background-color: rgb(1, 38, 63)
   }
   
   .navbar-inverse .navbar-toggle .icon-bar {
-    background-color: #fff
+    background-color: #90f2ff8c
   }
   
   .navbar-inverse .navbar-collapse,
   .navbar-inverse .navbar-form {
-    border-color: #101010
+    border: none
   }
   
   .navbar-inverse .navbar-nav>.open>a,
   .navbar-inverse .navbar-nav>.open>a:hover,
   .navbar-inverse .navbar-nav>.open>a:focus {
     background-color: #080808;
-    color: #fff
+    color: #90f2ff8c
   }
   
   @media (max-width:767px) {
@@ -5111,7 +5111,7 @@ html {
   
     .navbar-inverse .navbar-nav .open .dropdown-menu>li>a:hover,
     .navbar-inverse .navbar-nav .open .dropdown-menu>li>a:focus {
-      color: #fff;
+      color: #90f2ff8c;
       background-color: transparent
     }
   
