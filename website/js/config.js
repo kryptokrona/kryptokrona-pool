@@ -12,11 +12,11 @@ var cryptonatorWidget = ['{symbol}-BTC', '{symbol}-USD', '{symbol}-EUR']
 
 var easyminerDownload = 'https://github.com/zone117x/cryptonote-easy-miner/releases/'
 
-var blockchainExplorer = 'https://explorer.kryptokrona.se/?hash={id}#blockchain_block'
+var blockchainExplorer = 'http://explorer.kryptokrona.se/?hash={id}#blockchain_block'
 
-var transactionExplorer = 'https://explorer.kryptokrona.se/?hash={id}#blockchain_transaction'
+var transactionExplorer = 'http://explorer.kryptokrona.se/?hash={id}#blockchain_transaction'
 
-// var themeCss = 'css/default-theme.css'
+var themeCss = 'css/default-theme.css'
 
 var networkStat = {
   'xkr': [

@@ -240,7 +240,7 @@ function getBlockchainUrl(id) {
 }
 
 $(function () {
-    // $("head").append("<link rel='stylesheet' href=" + themeCss + ">");
+    $("head").append("<link rel='stylesheet' href=" + themeCss + ">");
 
     $.get(api + '/stats', function (data) {
         lastStats = data;
