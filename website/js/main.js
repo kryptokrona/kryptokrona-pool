@@ -238,10 +238,10 @@ function routePage(loadedCallback) {
 }
 
 function updateIndex() {
-    updateText('coinName', lastStats.config.coin);
-    var title = $(".navbar-brand").text();
-    $("title").text(title.charAt(0).toUpperCase() + title.slice(1));
-    updateText('poolVersion', lastStats.config.version);
+    // updateText('coinName', lastStats.config.coin);
+    // var title = $(".navbar-brand").text();
+    // $("title").text(title.charAt(0).toUpperCase() + title.slice(1));
+    // updateText('poolVersion', lastStats.config.version);
 }
 
 function getBlockchainUrl(id) {

@@ -80,7 +80,7 @@ h3,
 }
 
 #stats_updated {
-  display: none;
+  color: white;
 }
 
 hr {
@@ -6294,7 +6294,7 @@ tbody:hover {
 }
 
 #stats_updated {
-  color: #0101018f;
+  color: #c2c2c2;
 }
 
 hr {
