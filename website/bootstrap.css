@@ -5072,7 +5072,7 @@ html {
   }
   
   .navbar-inverse .navbar-toggle {
-    border-color: #90f2ff8c;
+    border-color: rgb(1, 38, 63)
   }
   
   .navbar-inverse .navbar-toggle:hover,
