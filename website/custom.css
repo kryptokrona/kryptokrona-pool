@@ -14,7 +14,7 @@ body {
   font-size: 14px;
   line-height: 1.428571429;
   color: #6f6e6e;
-  font-family: 'Montserrat', sans-serif;
+  font-family: 'Roboto', Helvetica, Arial, sans-serif;
 }
 h1,
 h2,
@@ -28,9 +28,9 @@ h6,
 .h4,
 .h5,
 .h6 {
-  font-weight: 300;
+  font-weight: 400;
   -webkit-font-smoothing: antialiased;
-  font-family: 'Montserrat', sans-serif;
+  font-family: 'Roboto Condensed', Arial, sans-serif;
 }
 h3,
 .h3 {
