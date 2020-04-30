@@ -19,9 +19,9 @@ var transactionExplorer = 'http://chainradar.com/{symbol}/transaction/{id}'
 var themeCss = 'themes/default-theme.css'
 
 var networkStat = {
-  'xkr': [
-    ['pool.kryptokrona.se', 'http://pool.kryptokrona.se:8117'],
-    ['pool2.kryptokrona.se', 'http://pool2.kryptokrona.se:8117']
+  'bcn': [
+    ['bcn.mypool.online', 'http://bcn.mypool.online:8084'],
+    ['democats.org', 'http://pool.democats.org:7603']
   ],
   'bip': [
     ['bip.mypool.online', 'http://bip.mypool.online:18874'],
