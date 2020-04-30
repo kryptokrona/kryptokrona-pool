@@ -78,30 +78,56 @@
 
 </style>
 
+
+<div id="siteInfo">
+    <!-- Description or information about this pool -->
+</div>
+
 <div class="row">
     <div class="col-md-4 stats">
         <h3>Network</h3>
-        <div>Hash Rate: <span id="networkHashrate"></span></div>
-        <div>Block Found: <span id="networkLastBlockFound"></span></div>
-        <div>Difficulty: <span id="networkDifficulty"></span></div>
-        <div>Blockchain Height: <span id="blockchainHeight"></span></div>
-        <div>Last Reward: <span id="networkLastReward"></span></div>
-        <div>Last Hash: <a id="lastHash" target="_blank"></a></div>
+        <div><i class="fa fa-tachometer"></i> Hash Rate: <span id="networkHashrate"></span></div>
+        <div><i class="fa fa-clock-o"></i> Block Found: <span id="networkLastBlockFound"></span></div>
+        <div><i class="fa fa-unlock-alt"></i> Difficulty: <span id="networkDifficulty"></span></div>
+        <div><i class="fa fa-bars"></i> Blockchain Height: <span id="blockchainHeight"></span></div>
+        <div><i class="fa fa-money"></i> Last Reward: <span id="networkLastReward"></span></div>
+        <div><i class="fa fa-paw"></i> Last Hash: <a id="lastHash" target="_blank"></a></div>
     </div>
 
     <div class="col-md-4 stats">
         <h3>Our Pool</h3>
-        <div>Hash Rate: <span id="poolHashrate"></span></div>
-        <div>Block Found: <span id="poolLastBlockFound"></span></div>
-        <div>Connected Miners: <span id="poolMiners"></span></div>
-        <div>Total Pool Fee: <span id="poolFee"></span></div>
-        <div>Block Found Every: <span id="blockSolvedTime"></span> (est.)</div>
+        <div><i class="fa fa-tachometer"></i> Hash Rate: <span id="poolHashrate"></span></div>
+        <div><i class="fa fa-clock-o"></i> Block Found: <span id="poolLastBlockFound"></span></div>
+        <div><i class="fa fa-users"></i> Connected Miners: <span id="poolMiners"></span></div>
+        <div id="donations"><i class="fa fa-gift"></i> Donations: <span id="poolDonations"></span></div>
+        <div><i class="fa fa-money"></i> Total Pool Fee: <span id="poolFee"></span></div>
+        <div><i class="fa fa-history"></i> Block Found Every: <span id="blockSolvedTime"></span> (est.)</div>
+    </div>
+
+    <div class="col-md-4 stats marketRate">
+        <h3 id="marketHeader">Market</h3>
+        <div class="marketFooter">Updated: <span id="marketLastUpdated"></span></div>
+        <div class="marketFooter">Powered by <a href="https://www.cryptonator.com/">Cryptonator</a></div>
     </div>
 </div>
 
 <!-- <hr> -->
 
 <div class="row chartsPoolStat">
+    <div class="col-sm-2 chartWrap">
+        <h4>Hash/USD <span data-toggle="tooltip" data-placement="top" data-original-title="Reward * Rate / Difficulty"><i class="fa fa-question-circle"></i></span></h4>
+        <div id="chartHashUsd" data-chart="profit">
+            <div class="chart"></div>
+            <!-- <p class="text-center" id="cur_profit">-</p> -->
+        </div>
+    </div>
+    <div class="col-sm-20 chartWrap">
+        <h4>Price in USD</h4>
+        <div id="chartPriceUsd" data-chart="price">
+            <div class="chart"></div>
+            <!-- <p class="text-center" id="cur_price">-</p> -->
+        </div>
+    </div>
     <div class="col-sm-20 chartWrap">
         <h4>Difficulty</h4>
         <div id="chartDifficulty" data-chart="diff">
@@ -123,15 +149,14 @@
             <!-- <p class="text-center" id="cur_workers">-</p> -->
         </div> 
     </div>    
-</div>
 
     <script>
         var currencyGraphStat = {
             type: 'line',
             width: '100%',
             height: '75',
-            lineColor: '#0101018f',
-            fillColor: '#01010120',
+            lineColor: '#90f2ff',
+            fillColor: '#90f2ff75',
             spotColor: null,
             minSpotColor: null,
             maxSpotColor: null,
@@ -147,8 +172,8 @@
 		        type: 'line',
 		        width: '100%',
 		        height: '180',
-		        lineColor: '#0101018f',
-		        fillColor: '#01010120',
+		        lineColor: '#90f2ff',
+		        fillColor: '#90f2ff75',
 		        spotColor: null,
 		        minSpotColor: null,
 		        maxSpotColor: null,
@@ -162,8 +187,8 @@
 		        type: 'line',
 		        width: '100%',
 		        height: '180',
-		        lineColor: '#0101018f',
-		        fillColor: '#01010120',
+		        lineColor: '#90f2ff',
+		        fillColor: '#90f2ff75',
 		        spotColor: null,
 		        minSpotColor: null,
 		        maxSpotColor: null,

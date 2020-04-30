@@ -1,6 +1,6 @@
-var api = 'http://pool.kryptokrona.se:8117'
+var api = 'http://poolhost.com:8117'
 
-var api_blockexplorer = 'https://explorer.kryptokrona.se/api'
+var api_blockexplorer = 'http://daemonhost.com:11898'
 
 var poolHost = 'poolhost.com'
 

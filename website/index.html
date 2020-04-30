@@ -14,20 +14,19 @@
     
     <script src="//netdna.bootstrapcdn.com/bootstrap/3.1.1/js/bootstrap.min.js"></script>
 
-    <link href="css/bootstrap.css" rel="stylesheet">
+    <link href="bootstrap.css" rel="stylesheet">
 
     <link href="//netdna.bootstrapcdn.com/font-awesome/4.1.0/css/font-awesome.min.css" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300&display=swap" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css?family=Oswald&display=swap" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro&display=swap" rel="stylesheet">
+
     <link href="//fonts.googleapis.com/css?family=Inconsolata" rel="stylesheet" type="text/css">
 
     <script src="config.js"></script>
+    <script src="custom.js"></script>
 
     <style>
         #coinName{
-            display: flex;
-            font: 100;
+            display: none;
         }
         body {
             padding-top: 65px;
@@ -360,26 +359,26 @@
                 <span class="icon-bar"></span>
                 <span class="icon-bar"></span>
             </button>
-            <a class="navbar-brand active" href="#"><span><img src="themes/img/icon.png" style="height: 20px"></span></a>
+            <a class="navbar-brand active" href="#"><span id="coinName"></span><img src="/themes/img/icon.png" style="height: 20px"></a>
         </div>
         <div class="collapse navbar-collapse">
             <ul class="nav navbar-nav" data-toggle="collapse" data-target=".navbar-collapse">
 
                 <li style="display:none;" class="active"><a class="hot_link" data-page="home.html" href="#">
-                     Home
+                    <i class="fa fa-home"></i> Home
                 </a></li>
 
                 <li><a class="hot_link" data-page="pool_blocks.html" href="#pool_blocks">
-                   Pool Blocks
+                    <i class="fa fa-cubes"></i> Pool Blocks
                 </a></li>
 
                 <li><a class="hot_link" data-page="payments.html" href="#payments">
-                     Payments
+                    <i class="fa fa-paper-plane-o"></i> Payments
                 </a></li>
 
 <!-- //-->
                 <li><a class="hot_link" data-page="blockchain_blocks.html" href="#blockchain_blocks">
-                     Blockchain
+                    <i class="fa fa-cubes"></i> Blockchain
                 </a></li>
 
                 <li style="display:none;"><a class="hot_link" data-page="blockchain_block.html" href="#blockchain_block">
@@ -389,15 +388,15 @@
                 </a></li>
 <!-- //-->
                 <li><a class="hot_link" data-page="network.html" href="#network">
-                     Network
+                    <i class="fa fa-chain"></i> Network
                 </a></li>
 
                 <li><a class="hot_link" data-page="worker_stats.html" href="#worker_stats">
-                     Worker Stats
+                    <i class="fa fa-tachometer"></i> Worker Stats
                 </a></li>
 
                 <li class="dropdown">
-                    <a class="dropdown-toggle" data-toggle="dropdown" href="#"> Support
+                    <a class="dropdown-toggle" data-toggle="dropdown" href="#"><i class="fa fa-comments"></i> Support
                         <span class="caret"></span>
                     </a>
                     <ul class="dropdown-menu">
