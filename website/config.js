@@ -12,16 +12,17 @@ var cryptonatorWidget = ['{symbol}-BTC', '{symbol}-USD', '{symbol}-EUR']
 
 var easyminerDownload = 'https://github.com/zone117x/cryptonote-easy-miner/releases/'
 
-var blockchainExplorer = 'http://chainradar.com/{symbol}/block/{id}'
+var blockchainExplorer = 'http://explorer.kryptokrona.se/?hash={id}#blockchain_block'
 
-var transactionExplorer = 'http://chainradar.com/{symbol}/transaction/{id}'
+var transactionExplorer = 'http://explorer.kryptokrona.se/?hash={id}#blockchain_transaction'
 
 var themeCss = 'themes/default-theme.css'
 
 var networkStat = {
   'xkr': [
     ['pool.kryptokrona.se', 'http://pool.kryptokrona.se:8117'],
-    ['pool2.kryptokrona.se', 'http://pool2.kryptokrona.se:8117']
+    ['pool2.kryptokrona.se', 'http://pool2.kryptokrona.se:8117'],
+    ['pool3.kryptokrona.se', 'http://pool3.kryptokrona.se:8117']
   ],
   'bip': [
     ['bip.mypool.online', 'http://bip.mypool.online:18874'],
