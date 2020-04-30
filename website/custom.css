@@ -1,5 +1,4 @@
-@import url(//fonts.googleapis.com/css?family=Roboto+Condensed:400,700);
-@import url(//fonts.googleapis.com/css?family=Roboto:400,300,500);
+
 /* Insert your pool's unique css here */
 .marketRate {
   display: none;
@@ -14,7 +13,7 @@ body {
   font-size: 14px;
   line-height: 1.428571429;
   color: #6f6e6e;
-  font-family: 'Montserrat', sans-serif;
+  font-family: 'Source Sans Pro', sans-serif;
 }
 h1,
 h2,
@@ -30,12 +29,18 @@ h6,
 .h6 {
   font-weight: 300;
   -webkit-font-smoothing: antialiased;
-  font-family: 'Montserrat', sans-serif;
+  font-family: 'Source Sans Pro', sans-serif;
+}
+
+.chartsPoolDiv{
+  display: flex;
+  flex-direction: column;
+  width: 100%;
 }
 h3,
 .h3 {
-  font-size: 32px;
-  margin-bottom: 14px;
+  font-size: 24px;
+  margin-bottom: 5px;
 }
 .navbar-inverse {
   background-color: #2D5768;
@@ -71,14 +76,14 @@ h3,
   background-color: #03a678;
 }
 #stats_updated {
-  color: #F4FC3D;
+  display: none;
 }
 hr {
   border-top-color: #BBBBBB;
 }
 .stats > div:not(#addressError) {
   color: #7C7C7C;
-  padding: 10px 0px;
+  padding: 5px 0px;
 }
 .stats > div:not(#addressError).marketFooter {
   padding: 5px 0;
@@ -218,13 +223,37 @@ footer {
 /************************************************
 *** charts ***
 ************************************************/
+
+
 .chartsPoolStat {
-  padding-top: 30px;
+  padding-top: 10px;
 }
 
-.chartWrap {
-	display: none;
+@media (max-width:768px) {
+  .chartsPoolStat {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .row {
+    display: flex;
+    flex-direction: row-reverse;
+    justify-content: center;
+    margin-left: -15px;
+    margin-right: -15px
+  }
+
 }
+@media (max-width:468px) {
+  .row {
+    display: flex;
+    flex-direction: column-reverse;
+    justify-content: center;
+    margin-left: -15px;
+    margin-right: -15px
+  }
+}
+
 
 .userChart .chart,
 .chartWrap .chart {
@@ -270,8 +299,8 @@ footer {
 .col-sm-20 {
   position: relative;
   min-height: 1px;
-  padding-left: 15px;
-  padding-right: 15px;
+  padding-left: 10px;
+  padding-right: 10px;
 }
 @media (min-width: 768px) {
   .col-sm-20 {
