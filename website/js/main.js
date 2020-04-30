@@ -1,10 +1,10 @@
-lastStats = {};
-	$(function() {
-		$.get(api + '/stats', function(data) {
-			lastStats = data;
-			routePage();
-		});
-	});
+$(document).ready(function(){
+    $.get(api + '/stats', function(data){
+         lastStats = data;
+         updateIndex();
+         routePage(fetchLiveStats);
+     });
+});
 
 
 var docCookies = {
@@ -242,6 +242,7 @@ function updateIndex() {
     // var title = $(".navbar-brand").text();
     // $("title").text(title.charAt(0).toUpperCase() + title.slice(1));
     // updateText('poolVersion', lastStats.config.version);
+    return;
 }
 
 function getBlockchainUrl(id) {
