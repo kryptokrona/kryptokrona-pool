@@ -1,20 +1,20 @@
-var api = 'https://gota.kryptokrona.se/api'
+var api = 'https://gota.kryptokrona.se/api' // Change this to your pools api, if ssl is not used its likely to be 'http://yourpooldomain.se:8117' 
 
-var api_blockexplorer = 'https://explorer.kryptokrona.se/api'
+var api_blockexplorer = 'https://explorer.kryptokrona.se/api' // Leave this unchanged
 
-var poolHost = 'poolhost.com'
+var poolHost = 'poolhost.com' // Change this to your pools site
 
-var irc = 'irc.freenode.net/#poolhost'
+var irc = 'irc.freenode.net/#poolhost' // Change this to your pools IRC channel
 
-var email = 'support@poolhost.com'
+var email = 'support@poolhost.com' // Change this to your our pools email
 
-var cryptonatorWidget = ['{symbol}-BTC', '{symbol}-USD', '{symbol}-EUR']
+var cryptonatorWidget = ['{symbol}-BTC', '{symbol}-USD', '{symbol}-EUR'] // Leave this unchanged
 
-var easyminerDownload = 'https://github.com/zone117x/cryptonote-easy-miner/releases/'
+var easyminerDownload = 'https://github.com/zone117x/cryptonote-easy-miner/releases/' // Leave this unchanged
 
-var blockchainExplorer = 'https://explorer.kryptokrona.se/?hash={id}#blockchain_block'
+var blockchainExplorer = 'https://explorer.kryptokrona.se/?hash={id}#blockchain_block' // Leave this unchanged
 
-var transactionExplorer = 'https://explorer.kryptokrona.se/?hash={id}#blockchain_transaction'
+var transactionExplorer = 'https://explorer.kryptokrona.se/?hash={id}#blockchain_transaction' // Leave this unchanged
 
 // var themeCss = 'css/default-theme.css'
 
@@ -23,6 +23,9 @@ var networkStat = {
     ['pool.kryptokrona.se', 'http://pool.kryptokrona.se:8117'],
     ['pool2.kryptokrona.se', 'http://pool2.kryptokrona.se:8117'],
     ['pool3.kryptokrona.se', 'http://pool3.kryptokrona.se:8117']
+    //Add your pool here to get network stats, put a comma on the ending of 
+    //the line above and uncomment the line below and fill in your credentials.
+    //['pooldomain', 'pool-url']
   ],
   'bip': [
     ['bip.mypool.online', 'http://bip.mypool.online:18874'],
