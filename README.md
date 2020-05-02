@@ -485,10 +485,8 @@ var themeCss = "themes/default-theme.css";
 
 #### 6) Customize your website
 
-The following files are included so that you can customize your pool website without having to make significant changes
-to `index.html` or other front-end files thus reducing the difficulty of merging updates with your own changes:
-* `custom.css` for creating your own pool style
-* `custom.js` for changing the functionality of your pool website
+You can customize your website by changing the pool name in pages/home.html at line 113. 
+The website includes dark mode / light mode by default that will automatically adjust according to the users OS preference so there is no need to switch css themes anymore. 
 
 
 Then simply serve the files via nginx, Apache, Google Drive, or anything that can host static content.
