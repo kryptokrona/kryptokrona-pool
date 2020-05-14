@@ -2585,9 +2585,9 @@ output {
 }
 
 .form-control:focus {
-  border-color: #66afe9;
+  border-color: transparent;
   outline: 0;
-  box-shadow: 0 1px 1px rgb(0, 0, 0, 0.075) inset, 0 0 8px rgb(102, 175, 233, 0.6);
+  box-shadow: 0 1px 1px transparent inset, 0 0 8px transparent;
 }
 
 .form-control::-moz-placeholder {
@@ -6512,9 +6512,24 @@ a.list-group-item.active:focus {
 @media (prefers-color-scheme: dark) {
 
   body {
-    background-color: rgb(35, 35, 35);
+    background-color: rgb(24, 24, 24);
     color: rgb(72, 72, 72);
     font-size: 1.2rem;
+  }
+
+  .form-control:focus {
+    border-color: transparent !important;
+    outline: 0;
+    box-shadow: transparent !important;
+}
+
+  .navbar-inverse {
+    background-color: hsl(0, 0%, 8%);
+    border-color: transparent;
+  }
+
+  footer {
+    background-color: hsl(0, 0%, 8%);
   }
 
   .stats>div:not(#addressError) {
@@ -6526,20 +6541,25 @@ a.list-group-item.active:focus {
   }
 
   .table>thead>tr>th {
-    color: black;
-    border-bottom-color: black;
+    color: rgb(171, 171, 171);
+    border-bottom-color: transparent;
   }
 
   .stats>div:not(#addressError)>i.fa {
-    color: black;
+    color: rgb(171, 171, 171);
   }
 
+  h3, .h3 {
+    font-size: 20px;
+    color: rgba(255, 255, 255, 0.42);
+}
+
   a {
-    color: black;
+    color: rgb(171, 171, 171);
   }
 
   a:hover {
-    color: hsl(0, 0%, 28%);
+    color: hsl(0, 0%, 13%);
   }
 
   .luckGood {
