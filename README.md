@@ -116,8 +116,17 @@ you are using - a good place to start with redis is [data persistence](http://re
 ##### Debian 9/Ubuntu 18 installation
 These are the steps taken to install pool on Debian 9.  These steps will also work on Ubuntu 16 & 18:
 
+Always start with:
+
 ```bash
-sudo apt-get install -y git curl wget screen build-essential redis-server libboost-all-dev cmake libssl-dev node-gyp
+sudo apt update
+sudo apt upgrade
+```
+
+The packages need for the pool software
+
+```bash
+sudo apt-get install -y git curl wget screen build-essential redis-server libboost-all-dev cmake libssl-dev
 ```
 I have currently tested this on Node 10.22.0
 
