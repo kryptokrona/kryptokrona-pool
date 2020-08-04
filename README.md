@@ -1,7 +1,7 @@
 ![image](https://i.imgur.com/0NjeEHU.png)
 
 
-kryptokrona-pool (for NodeJS LTS)
+kryptokrona-pool (for NodeJS 10)
 ====================
 Formerly known as turtle-pool, which in turn was known as cryptonote-forknote-pool, forked from Forknote Project.
 
