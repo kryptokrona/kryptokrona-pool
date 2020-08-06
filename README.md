@@ -1,7 +1,7 @@
 ![image](https://i.imgur.com/0NjeEHU.png)
 
 
-kryptokrona-pool (for NodeJS LTS)
+kryptokrona-pool (for NodeJS 10)
 ====================
 Formerly known as turtle-pool, which in turn was known as cryptonote-forknote-pool, forked from Forknote Project.
 
@@ -112,36 +112,41 @@ Those are legitimate requirements. If you use old versions of Node.js or Redis t
 include `bind 127.0.0.1` in your `redis.conf` file. Also it's a good idea to learn about and understand software that
 you are using - a good place to start with redis is [data persistence](http://redis.io/topics/persistence).
 
-##### Easy install on Ubuntu 14 LTS
 
-Installing pool on different Linux distributives is different because it depends on system default components and versions. For now the easiest way to install pool is to use Ubuntu 14 LTS. Thus, all you had to do in order to prepare Ubuntu 14 for pool installation is to run:
-
-```bash
-sudo apt-get install -y git build-essential redis-server libboost1.55-all-dev cmake libssl-dev node-gyp
-```
-
-##### Debian 9 installation
+##### Debian 9/Ubuntu 18 installation
 These are the steps taken to install pool on Debian 9.  These steps will also work on Ubuntu 16 & 18:
 
+Always start with:
+
 ```bash
-sudo apt-get install -y git curl wget screen build-essential redis-server libboost-all-dev cmake libssl-dev node-gyp
+sudo apt update
+sudo apt upgrade
 ```
-I have currently tested this on Node 8.11.1 and 8.12.0.
+
+The packages need for the pool software
+
+```bash
+sudo apt-get install -y git curl wget screen build-essential redis-server libboost-all-dev cmake libssl-dev
+```
+I have currently tested this on Node 10.22.0
 
 You can install node here: (https://nodejs.org/en/download/package-manager/)
 
 Or directly from a terminal:
 
 ```bash
-curl -sL https://deb.nodesource.com/setup_8.x | sudo -E bash -
+curl -sL https://deb.nodesource.com/setup_10.x | sudo -E bash -
 sudo apt-get install -y nodejs
 ```
 
 I have found using a screen session to keep everything running on the server works well.
 
-Grab your most recent TurtleCoin release (https://github.com/turtlecoin/turtlecoin/releases/) then launch your daemon and sync your chain.
+Grab the most recent Kryptokrona release here https://github.com/kryptokrona/kryptokrona/releases then launch your daemon and sync your chain.
+Or compile the source: https://github.com/kryptokrona/kryptokrona
 
-Once your daemon is synced with the network start your turtle-service and redis-server.
+Note: There is a bootstrap available here:  https://kryptokrona.se/blockchain.zip
+
+Once your daemon is synced with the network start your kryptokrona-service and redis-server.
 
 #### 1) Downloading & Installing
 
@@ -151,6 +156,12 @@ Clone the repository and run `npm install` for all the dependencies to be instal
 git clone https://github.com/kryptokrona/kryptokrona-pool
 cd kryptokrona-pool
 npm install && npm test
+```
+
+To fix vulnerabilities and remove some packges not needed run:
+
+```bash
+npm audit fix
 ```
 
 #### 2) Configuration
@@ -291,6 +302,7 @@ Explanation for each field:
 "payments": {
     "enabled": true,
     "interval": 600, //how often to run in seconds
+    "mixin": 1, // The mixin count refers to the number of other signatures (aside from yours) in the ring signature that authorizes the transaction
     "maxAddresses": 50, //split up payments if sending to more than this many addresses
     "transferFee": 100, //fee to pay for each transaction
     "minPayment": 1000000, //miner balance required before sending payment

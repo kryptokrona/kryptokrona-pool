@@ -90,6 +90,7 @@
     "interval": 120,
     "maxAddresses": 50,
     "transferFee": 100,
+    "mixin": 1,
     "minPayment": 100000,
     "minPaymentIdPayment": 10000000,
     "maxTransactionAmount": 100000000,
@@ -112,7 +113,7 @@
     "port": 8117,
     "blocks": 30,
     "payments": 30,
-    "password": "your_password"
+    "password": "<replace with your password>"
   },
   "daemon": {
     "host": "127.0.0.1",
