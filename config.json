@@ -1,7 +1,7 @@
 {
   "coin": "kryptokrona",
   "symbol": "XKR",
-  "coinUnits": 100,
+  "coinUnits": 10000,
   "coinDifficultyTarget": 90,
   "logging": {
     "files": {
@@ -94,7 +94,7 @@
     "minPayment": 100000,
     "minPaymentIdPayment": 10000000,
     "maxTransactionAmount": 100000000,
-    "denomination": 100
+    "denomination": 10000
   },
   "blockUnlocker": {
     "enabled": true,
