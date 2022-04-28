@@ -14,7 +14,7 @@
         "test": "npm install && node tests/dependencyTests.js"
     },
     "dependencies": {
-        "async": "1",
+        "async": "2",
         "base58-native": "*",
         "bignum": "*",
         "cli-color": "^1.4.0",
